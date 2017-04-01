@@ -1,3 +1,3 @@
 # DotNetCoreProjects
 
-<http://dotnetcorelibs.apps.stephencleary.com/>
+<http://dotnetcorelibs.stephencleary.com/>

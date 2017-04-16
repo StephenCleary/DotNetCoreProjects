@@ -1,0 +1,16 @@
+/* Styles go here */
+
+.highlightOnHover:hover {
+  background-color: lightblue;
+}
+
+.verticalSpacing {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+code {
+  background-color: #F2F3F9;
+  color: inherit;
+  white-space: normal;
+}

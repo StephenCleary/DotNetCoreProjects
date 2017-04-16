@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My Netstandard Libraries</title>
+    <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link data-require="bootstrap@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="jquery@*" data-semver="2.0.3" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.0.0" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@*" data-semver="1.2.0" src="//code.angularjs.org/1.2.0/angular.js"></script>
+    <script data-require="angular-sanitize@*" data-semver="1.2.0" src="//code.angularjs.org/1.2.0/angular-sanitize.js"></script>
+    <script data-require="angular-ui-bootstrap@0.12.0" data-semver="0.12.0" src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div ng-app="App">
+      <div ng-controller="MyCtrl">
+        <div>
+          <h1>My Open-Source Netstandard Libraries</h1>
+        </div>
+
+        <div class="btn-group" style="margin-bottom:10px">
+            <label class="btn btn-primary" ng-model="display" btn-radio="'projects'">Projects</label>
+            <label class="btn btn-primary" ng-model="display" btn-radio="'types'">Types</label>
+        </div>
+
+        <div ng-show="display == 'projects'">
+          <div>
+            <input type="text" ng-model="projectfilter" class="form-control" placeholder="Filter" />
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>Project</th>
+                <th>Description</th>
+                <th>Common Types</th>
+                <th>Docs</th>
+                <th>Build</th>
+                <th>Coverage</th>
+                <th>NuGet Package(s)</th>
+              </tr>
+              <tr ng-repeat="project in projects | filter:projectfilter | orderBy:'project'">
+                <td>
+                  <a ng-href="https://github.com/StephenCleary/{{project.project}}" target="_blank">{{project.project}}</a>
+                </td>
+                <td ng-bind-html="project.description"></td>
+                <td><span ng-repeat="type in project.commonlyUsedTypes"><code>{{type}}</code> </span></td>
+                <td>
+                  <div ng-repeat="package in project.packages | orderBy:'package'">
+                    <a ng-href="http://dotnetapis.com/pkg/{{package}}" target="_blank">
+                      <img ng-src="https://img.shields.io/badge/docs-API_reference-brightgreen.svg?style=plastic" />
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <a ng-href="https://ci.appveyor.com/project/StephenCleary/{{project.project | dotsToDashes}}" target="_blank">
+                    <img ng-src="https://img.shields.io/appveyor/ci/StephenCleary/{{project.project | dotsToDashes}}.svg?style=plastic" />
+                  </a>
+                </td>
+                <td>
+                  <a ng-href="https://coveralls.io/r/StephenCleary/{{project.project}}" target="_blank">
+                    <img ng-src="https://img.shields.io/coveralls/StephenCleary/{{project.project}}.svg?style=plastic" />
+                  </a>
+                </td>
+                <td>
+                  <div ng-repeat="package in project.packages | orderBy:'package'">
+                    <a ng-href="https://www.nuget.org/packages/{{package}}" target="_blank">
+                      <img ng-attr-title="{{package}}" ng-src="https://img.shields.io/nuget/vpre/{{package}}.svg?style=plastic" />
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div ng-show="display == 'types'">
+          <div>
+            <input type="text" ng-model="typefilter" class="form-control" placeholder="Filter" />
+          </div>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Project</th>
+                <th>NuGet Package</th>
+              </tr>
+              <tr ng-repeat="type in types | filter:typefilter | orderBy:'fullName'">
+                <td>
+                  <code ng-bind-html="type.namespace + '.' + type.name | escapeHTML | allowwrap"></code>
+                </td>
+                <td ng-bind-html="type.description"></td>
+                <td>
+                  <a ng-href="https://github.com/StephenCleary/{{type.project}}" ng-bind-html="type.project | allowwrap" target="_blank"></a>
+                </td>
+                <td>
+                  <a ng-href="https://www.nuget.org/packages/{{type.package}}" target="_blank">
+                    <img ng-attr-title="{{type.package}}" ng-src="https://img.shields.io/nuget/vpre/{{type.package}}.svg?style=plastic" />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

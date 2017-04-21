@@ -43,17 +43,10 @@ var data = [
 },
 
 {
-  "id": "AsyncEx.Context",
-  "description": "A single-threaded async-compatible context.",
-  "commonlyUsedTypes": ["AsyncContext", "AsyncContextThread"],
-  "packages": ["Nito.AsyncEx.Context"]
-},
-
-{
-  "id": "AsyncEx.Oop",
-  "description": "Interfaces and utility methods for combining async with OOP.",
-  "commonlyUsedTypes": ["DeferralManager"],
-  "packages": ["Nito.AsyncEx.Oop"]
+  "id": "AsyncEx",
+  "description": "Helper library for <code>async/await</code>.",
+  "commonlyUsedTypes": ["AsyncLock", "AsyncLazy<T>", "PauseToken", "AsyncManualResetEvent", "AsyncContext"],
+  "packages": ["Nito.AsyncEx.Context", "Nito.AsyncEx.Oop", "Nito.AsyncEx.Tasks", "Nito.AsyncEx.Coordination", "Nito.AsyncEx.Interop.WaitHandles"]
 },
 
 {
@@ -61,20 +54,6 @@ var data = [
   "description": "Lightweight extension methods for <code>ArraySegment&lt;T&gt;</code>, particularly useful for byte arrays.",
   "commonlyUsedTypes": ["ArraySegmentExtensions"],
   "packages": ["Nito.ArraySegments", "Nito.ArraySegments.Streams"]
-},
-
-{
-  "id": "AsyncEx.Tasks",
-  "description": "Basic task-based helpers for asynchronous code.",
-  "commonlyUsedTypes": ["TaskConstants", "TaskExtensions", "TaskFactoryExtensions"],
-  "packages": ["Nito.AsyncEx.Tasks"]
-},
-
-{
-  "id": "AsyncEx.Coordination",
-  "description": "Async-compatible coordination primitives.",
-  "commonlyUsedTypes": ["AsyncLock", "AsyncLazy<T>", "PauseToken", "AsyncManualResetEvent"],
-  "packages": ["Nito.AsyncEx.Coordination"]
 },
 
 {

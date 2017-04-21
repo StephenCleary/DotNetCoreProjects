@@ -32,10 +32,12 @@
                 <th>Project</th>
                 <th>Description</th>
                 <th>Common Types</th>
-                <th>Docs</th>
                 <th>Build</th>
                 <th>Coverage</th>
-                <th>NuGet Package(s)</th>
+                <th>Components</th>
+                <th>Docs</th>
+                <th>NuGet (stable)</th>
+                <th>NuGet (prerelease)</th>
               </tr>
               <tr ng-repeat="project in projects | filter:projectfilter | orderBy:'project'">
                 <td>
@@ -43,13 +45,6 @@
                 </td>
                 <td ng-bind-html="project.description"></td>
                 <td><span ng-repeat="type in project.commonlyUsedTypes"><code>{{type}}</code> </span></td>
-                <td>
-                  <div ng-repeat="package in project.packages | orderBy:'package'">
-                    <a ng-href="http://dotnetapis.com/pkg/{{package}}" target="_blank">
-                      <img ng-src="https://img.shields.io/badge/docs-API_reference-brightgreen.svg?style=plastic" />
-                    </a>
-                  </div>
-                </td>
                 <td>
                   <a ng-href="https://ci.appveyor.com/project/StephenCleary/{{project.project | dotsToDashes}}" target="_blank">
                     <img ng-src="https://img.shields.io/appveyor/ci/StephenCleary/{{project.project | dotsToDashes}}.svg?style=plastic" />
@@ -59,6 +54,27 @@
                   <a ng-href="https://coveralls.io/r/StephenCleary/{{project.project}}" target="_blank">
                     <img ng-src="https://img.shields.io/coveralls/StephenCleary/{{project.project}}.svg?style=plastic" />
                   </a>
+                </td>
+                <td>
+                  <div ng-repeat="package in project.packages | orderBy:'package'">
+                    <a ng-href="https://www.nuget.org/packages/{{package}}" target="_blank">
+                      {{package}}
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div ng-repeat="package in project.packages | orderBy:'package'">
+                    <a ng-href="http://dotnetapis.com/pkg/{{package}}" target="_blank">
+                      <img ng-src="https://img.shields.io/badge/docs-API_reference-brightgreen.svg?style=plastic" />
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div ng-repeat="package in project.packages | orderBy:'package'">
+                    <a ng-href="https://www.nuget.org/packages/{{package}}" target="_blank">
+                      <img ng-attr-title="{{package}}" ng-src="https://img.shields.io/nuget/v/{{package}}.svg?style=plastic" />
+                    </a>
+                  </div>
                 </td>
                 <td>
                   <div ng-repeat="package in project.packages | orderBy:'package'">

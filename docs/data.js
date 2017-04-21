@@ -53,7 +53,7 @@ var data = [
   "id": "ArraySegments",
   "description": "Lightweight extension methods for <code>ArraySegment&lt;T&gt;</code>, particularly useful for byte arrays.",
   "commonlyUsedTypes": ["ArraySegmentExtensions"],
-  "packages": ["Nito.ArraySegments", "Nito.ArraySegments.Streams"]
+  "packages": ["Nito.ArraySegments"]
 },
 
 {

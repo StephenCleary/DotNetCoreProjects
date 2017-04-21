@@ -71,6 +71,13 @@ var data = [
 },
 
 {
+  "id": "UniformResourceIdentifiers",
+  "description": "RFC3986-compliant URI encoding.",
+  "commonlyUsedTypes": ["UniformResourceIdentifier", "HttpUniformResourceIdentifier"],
+  "packages": ["Nito.UniformResourceIdentifiers.Core", "Nito.UniformResourceIdentifiers.Http", "Nito.UniformResourceIdentifiers.IPAddress"]
+},
+
+{
   "id": "Deque",
   "description": "A double-ended queue.",
   "commonlyUsedTypes": ["Deque<T>"],

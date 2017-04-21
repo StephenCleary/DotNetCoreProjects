@@ -146,6 +146,27 @@ var data = [
 },
 
 {
+  "id": "Disposables",
+  "description": "<code>IDisposable</code> implementations and helper types.",
+  "commonlyUsedTypes": ["AnonymousDisposable", "SingleDisposable<T>"],
+  "packages": [
+  {
+    "id": "Nito.Disposables",
+    "types": [
+    {
+      "namespace": "Nito.Disposables",
+      "name": "AnonymousDisposable",
+      "description": "A disposable that executes a delegate when disposed."
+    },
+    {
+      "namespace": "Nito.Disposables",
+      "name": "SingleDisposable<T>",
+      "description": "A base class for disposables that need exactly-once semantics in a threadsafe way."
+    }]
+  }]
+},
+
+{
   "id": "AsyncEx.Context",
   "description": "A single-threaded async-compatible context.",
   "commonlyUsedTypes": ["AsyncContext", "AsyncContextThread"],

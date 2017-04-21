@@ -22,12 +22,7 @@
           <h1>My Open-Source Netstandard Libraries</h1>
         </div>
 
-        <div class="btn-group" style="margin-bottom:10px">
-            <label class="btn btn-primary" ng-model="display" btn-radio="'projects'">Projects</label>
-            <label class="btn btn-primary" ng-model="display" btn-radio="'types'">Types</label>
-        </div>
-
-        <div ng-show="display == 'projects'">
+        <div>
           <div>
             <input type="text" ng-model="projectfilter" class="form-control" placeholder="Filter" />
           </div>
@@ -77,35 +72,6 @@
           </table>
         </div>
         
-        <div ng-show="display == 'types'">
-          <div>
-            <input type="text" ng-model="typefilter" class="form-control" placeholder="Filter" />
-          </div>
-          <table class="table table-striped">
-            <tbody>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Project</th>
-                <th>NuGet Package</th>
-              </tr>
-              <tr ng-repeat="type in types | filter:typefilter | orderBy:'fullName'">
-                <td>
-                  <code ng-bind-html="type.namespace + '.' + type.name | escapeHTML | allowwrap"></code>
-                </td>
-                <td ng-bind-html="type.description"></td>
-                <td>
-                  <a ng-href="https://github.com/StephenCleary/{{type.project}}" ng-bind-html="type.project | allowwrap" target="_blank"></a>
-                </td>
-                <td>
-                  <a ng-href="https://www.nuget.org/packages/{{type.package}}" target="_blank">
-                    <img ng-attr-title="{{type.package}}" ng-src="https://img.shields.io/nuget/vpre/{{type.package}}.svg?style=plastic" />
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </div>
     </div>
   </body>

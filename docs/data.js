@@ -46,7 +46,7 @@ var data = [
   "id": "AsyncEx",
   "description": "Helper library for <code>async/await</code>.",
   "commonlyUsedTypes": ["AsyncLock", "AsyncLazy<T>", "PauseToken", "AsyncManualResetEvent", "AsyncContext"],
-  "packages": ["Nito.AsyncEx.Context", "Nito.AsyncEx.Oop", "Nito.AsyncEx.Tasks", "Nito.AsyncEx.Coordination", "Nito.AsyncEx.Interop.WaitHandles"]
+  "packages": ["Nito.AsyncEx", "Nito.AsyncEx.Context", "Nito.AsyncEx.Oop", "Nito.AsyncEx.Tasks", "Nito.AsyncEx.Coordination", "Nito.AsyncEx.Interop.WaitHandles", "Nito.Cancellation"]
 },
 
 {
@@ -67,14 +67,14 @@ var data = [
   "id": "Comparers",
   "description": "The last comparison library you'll ever need!",
   "commonlyUsedTypes": ["ComparerBuilder", "ComparableBase<T>", "EqualityComparerBuilder", "EquatableBase<T>"],
-  "packages": ["Nito.Comparers.Core", "Nito.Comparers.Linq", "Nito.Comparers.Rx", "Nito.Comparers.Ix"]
+  "packages": ["Nito.Comparers", "Nito.Comparers.Core", "Nito.Comparers.Linq", "Nito.Comparers.Rx", "Nito.Comparers.Ix"]
 },
 
 {
   "id": "UniformResourceIdentifiers",
   "description": "RFC3986-compliant URI encoding.",
   "commonlyUsedTypes": ["UniformResourceIdentifier", "HttpUniformResourceIdentifier"],
-  "packages": ["Nito.UniformResourceIdentifiers.Core", "Nito.UniformResourceIdentifiers.Http", "Nito.UniformResourceIdentifiers.IPAddress"]
+  "packages": ["Nito.UniformResourceIdentifiers", "Nito.UniformResourceIdentifiers.Core", "Nito.UniformResourceIdentifiers.Http", "Nito.UniformResourceIdentifiers.IPAddress"]
 },
 
 {

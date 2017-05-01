@@ -46,7 +46,7 @@ var data = [
   "id": "AsyncEx",
   "description": "Helper library for <code>async/await</code>.",
   "commonlyUsedTypes": ["AsyncLock", "AsyncLazy<T>", "PauseToken", "AsyncManualResetEvent", "AsyncContext"],
-  "packages": ["Nito.AsyncEx", "Nito.AsyncEx.Context", "Nito.AsyncEx.Oop", "Nito.AsyncEx.Tasks", "Nito.AsyncEx.Coordination", "Nito.AsyncEx.Interop.WaitHandles", "Nito.Cancellation"]
+  "packages": ["Nito.AsyncEx", "Nito.AsyncEx.Context", "Nito.AsyncEx.Oop", "Nito.AsyncEx.Tasks", "Nito.AsyncEx.Coordination", "Nito.AsyncEx.Interop.WaitHandles"]
 },
 
 {
@@ -74,7 +74,7 @@ var data = [
   "id": "UniformResourceIdentifiers",
   "description": "RFC3986-compliant URI encoding.",
   "commonlyUsedTypes": ["UniformResourceIdentifier", "HttpUniformResourceIdentifier"],
-  "packages": ["Nito.UniformResourceIdentifiers", "Nito.UniformResourceIdentifiers.Core", "Nito.UniformResourceIdentifiers.Http", "Nito.UniformResourceIdentifiers.IPAddress"]
+  "packages": ["Nito.UniformResourceIdentifiers", "Nito.UniformResourceIdentifiers.Core", "Nito.UniformResourceIdentifiers.IPAddress", "Nito.UniformResourceIdentifiers.Http", "Nito.UniformResourceIdentifiers.Tag"]
 },
 
 {

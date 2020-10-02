@@ -50,13 +50,6 @@ var data = [
 },
 
 {
-  "id": "ArraySegments",
-  "description": "Lightweight extension methods for <code>ArraySegment&lt;T&gt;</code>, particularly useful for byte arrays.",
-  "commonlyUsedTypes": ["ArraySegmentExtensions"],
-  "packages": ["Nito.ArraySegments"]
-},
-
-{
   "id": "ConnectedProperties",
   "description": "Dynamically attach properties to (almost) any object instance.",
   "commonlyUsedTypes": ["ConnectedProperty"],

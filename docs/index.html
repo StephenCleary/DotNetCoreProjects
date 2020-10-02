@@ -29,6 +29,7 @@
           <table class="table table-striped">
             <tbody>
               <tr>
+                <th>Icon</th>
                 <th>Project</th>
                 <th>Description</th>
                 <th>Common Types</th>
@@ -41,6 +42,11 @@
                 <th>NuGet (prerelease)</th>
               </tr>
               <tr ng-repeat="project in projects | filter:projectfilter | orderBy:'project'">
+                <td>
+                  <a ng-href="https://github.com/StephenCleary/{{project.project}}" target="_blank">
+                    <img ng-src="https://github.com/StephenCleary/{{project.project}}/raw/master/src/icon.png" />
+                  </a>
+                </td>
                 <td>
                   <a ng-href="https://github.com/StephenCleary/{{project.project}}" target="_blank">{{project.project}}</a>
                 </td>

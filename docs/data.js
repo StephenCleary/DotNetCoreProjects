@@ -71,10 +71,38 @@ var data = [
 },
 
 {
+  "id": "Logging",
+  "description": "A library for using scopes with Microsoft.Extensions.Logging.",
+  "commonlyUsedTypes": ["AddExceptionLoggingScopes", "BeginCapturedExceptionLoggingScopes"],
+  "packages": ["Nito.Logging"]
+},
+
+{
+  "id": "DependencyInjection",
+  "description": "Helpers for Microsoft.Extensions.DependencyInjection.",
+  "commonlyUsedTypes": ["InstanceBuilder"],
+  "packages": ["Nito.DependencyInjection.InstanceBuilder"]
+},
+
+{
+  "id": "Try",
+  "description": "The Try monad (Error/Exceptional monad) for C#.",
+  "commonlyUsedTypes": ["Try<T>"],
+  "packages": ["Nito.Try"]
+},
+
+{
   "id": "UniformResourceIdentifiers",
   "description": "RFC3986-compliant URI encoding.",
   "commonlyUsedTypes": ["UniformResourceIdentifier", "HttpUniformResourceIdentifier"],
   "packages": ["Nito.UniformResourceIdentifiers", "Nito.UniformResourceIdentifiers.Core", "Nito.UniformResourceIdentifiers.IPAddress", "Nito.UniformResourceIdentifiers.Http", "Nito.UniformResourceIdentifiers.Tag"]
+},
+
+{
+  "id": "Guids",
+  "description": "Helper types for creating and interpreting GUIDs.",
+  "commonlyUsedTypes": ["DecodedGuid", "GuidFactory"],
+  "packages": ["Nito.Guids"]
 },
 
 {

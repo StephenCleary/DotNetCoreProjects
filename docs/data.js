@@ -74,14 +74,14 @@ var data = [
   "id": "Logging",
   "description": "A library for using scopes with Microsoft.Extensions.Logging.",
   "commonlyUsedTypes": ["AddExceptionLoggingScopes", "BeginCapturedExceptionLoggingScopes"],
-  "packages": ["Nito.Logging"]
+  "packages": ["Nito.Logging", "Nito.Logging.ExceptionLoggingScope"]
 },
 
 {
   "id": "DependencyInjection",
   "description": "Helpers for Microsoft.Extensions.DependencyInjection.",
   "commonlyUsedTypes": ["InstanceBuilder"],
-  "packages": ["Nito.DependencyInjection.InstanceBuilder"]
+  "packages": ["Nito.DependencyInjection.InstanceBuilder", "Nito.DependencyInjection.InstanceBuilder.Core", "Nito.DependencyInjection.InstanceBuilder.Options"]
 },
 
 {

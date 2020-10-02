@@ -32,7 +32,8 @@
                 <th>Project</th>
                 <th>Description</th>
                 <th>Common Types</th>
-                <th>Build</th>
+                <th>Build (AppVeyor)</th>
+                <th>Build (GitHub)</th>
                 <th>Coverage</th>
                 <th>Components</th>
                 <th>Docs</th>
@@ -48,6 +49,11 @@
                 <td>
                   <a ng-href="https://ci.appveyor.com/project/StephenCleary/{{project.project | dotsToDashes}}" target="_blank">
                     <img ng-src="https://img.shields.io/appveyor/ci/StephenCleary/{{project.project | dotsToDashes}}.svg?style=plastic" />
+                  </a>
+                </td>
+                <td>
+                  <a ng-href="https://github.com/StephenCleary/{{project.project}}/actions?query=workflow%3ABuild" target="_blank">
+                    <img ng-src="https://github.com/StephenCleary/{{project.project}}/workflows/Build/badge.svg" />
                   </a>
                 </td>
                 <td>

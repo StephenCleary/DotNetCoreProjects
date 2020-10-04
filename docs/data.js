@@ -8,24 +8,10 @@ var data = [
 },
 
 {
-  "id": "Mvvm.Async",
-  "description": "Asynchronous MVVM helpers.",
-  "commonlyUsedTypes": ["IAsyncCommand", "NotifyTask"],
-  "packages": ["Nito.Mvvm.Async"]
-},
-
-{
-  "id": "Mvvm.Core",
-  "description": "Basic MVVM helpers.",
-  "commonlyUsedTypes": ["PropertyChangedEventArgsCache", "WeakCanExecuteChanged"],
-  "packages": ["Nito.Mvvm.Core"]
-},
-
-{
-  "id": "Mvvm.CalculatedProperties",
-  "description": "Auto-raise <code>NofityPropertyChanged</code>.",
-  "commonlyUsedTypes": ["PropertyHelper", "CalculatedProperty<T>", "TriggerProperty<T>"],
-  "packages": ["Nito.Mvvm.CalculatedProperties"]
+  "id": "Mvvm",
+  "description": "MVVM helpers.",
+  "commonlyUsedTypes": ["PropertyChangedEventArgsCache", "WeakCanExecuteChanged", "PropertyHelper", "CalculatedProperty<T>", "TriggerProperty<T>", "NotifyTask"],
+  "packages": ["Nito.Mvvm", "Nito.Mvvm.Core", "Nito.Mvvm.CalculatedProperties", "Nito.Mvvm.Async"]
 },
 
 {

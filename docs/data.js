@@ -22,6 +22,13 @@ var data = [
 },
 
 {
+    "id": "CRCs",
+    "description": "CRC algorithm implementations for .NET.",
+    "commonlyUsedTypes": ["CRC32", "CRC16"],
+    "packages": ["Nito.CRCs"]
+  },
+  
+{
   "id": "Disposables",
   "description": "<code>IDisposable</code> implementations and helper types.",
   "commonlyUsedTypes": ["AnonymousDisposable", "SingleDisposable<T>"],

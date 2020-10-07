@@ -22,10 +22,10 @@ var data = [
 },
 
 {
-    "id": "CRCs",
-    "description": "CRC algorithm implementations for .NET.",
-    "commonlyUsedTypes": ["CRC32", "CRC16"],
-    "packages": ["Nito.CRCs"]
+    "id": "HashAlgorithms",
+    "description": "Hash algorithm implementations for .NET, including CRC32 and CRC16.",
+    "commonlyUsedTypes": ["CRC32", "CRC16", "HashAlgorithmBase"],
+    "packages": ["Nito.HashAlgorithms", "Nito.HashAlgorithms.Core", "Nito.HashAlgorithms.CRC"]
   },
   
 {

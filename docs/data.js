@@ -59,8 +59,8 @@ var data = [
 {
   "id": "Logging",
   "description": "A library for using scopes with Microsoft.Extensions.Logging.",
-  "commonlyUsedTypes": ["AddExceptionLoggingScopes", "BeginCapturedExceptionLoggingScopes"],
-  "packages": ["Nito.Logging", "Nito.Logging.ExceptionLoggingScope"]
+  "commonlyUsedTypes": ["BeginDataScope", "AddExceptionLoggingScopes", "BeginCapturedExceptionLoggingScopes"],
+  "packages": ["Nito.Logging", "Nito.Logging.DataScopes", "Nito.Logging.ExceptionLoggingScope"]
 },
 
 {
